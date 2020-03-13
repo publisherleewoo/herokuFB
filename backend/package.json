@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_ENV=production&&pm2 start index.js --watch --no-daemon &&pm2 logs --watch",
+    "dev": "set NODE_ENV=development&&pm2 start index.js --watch --no-daemon &&pm2 logs --watch",
+    "deploy": "git push heroku master",
+    "stop": "pm2 kill"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.3",
+    "pm2": "^4.2.3",
+    "sequelize": "^5.21.5"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
+  }
+}
